@@ -1,0 +1,8 @@
+		  void delete_data()
+		  {
+			  char qbuf[200],id_title[50];
+			  cout<<"请输入要删除的药品编号或名称: "<<endl;
+			  cin>>id_title;
+			  sprintf(qbuf, "delete from  drug where drug_id='%s' or drug_title ='%s';",id_title,id_title);
+	          mysql_query(&mysql, qbuf);
+		  };
